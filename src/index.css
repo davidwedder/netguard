@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Base (Light Mode → transformado em modo Black Premium) */
+    --background: 0 0% 0%;              /* Preto absoluto estilo C6 */
+    --foreground: 0 0% 92%;             /* Cinza claro premium */
+
+    --card: 0 0% 7%;                    /* Grafite profundo (estilo metalizado) */
+    --card-foreground: 0 0% 92%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 92%;
+
+    --primary: 0 0% 100%;               /* Branco puro como destaque */
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 12%;              /* Cinza carvão */
+    --secondary-foreground: 0 0% 92%;
+
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 0% 18%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 0 0% 80%;
+
+    --radius: 0.5rem;
+
+    /* Security Status Tokens */
+    --status-online: 142 65% 60%;       /* Verde neon sobre fundo preto */
+    --status-offline: 0 0% 40%;         /* Cinza fosco */
+    --status-armed: 110 100% 50%;        /* Azul gelo metálico */
+    --status-disarmed: 42 95% 55%;      /* Amarelo vivo */
+    --zone-normal: 142 20% 20%;
+    --zone-violated: 0 72% 60%;
+    --zone-bypass: 42 90% 45%;
+
+    --shadow-card: 0 0% 0% / 0.35;
+    --shadow-elevated: 0 0% 0% / 0.55;
+
+    --sidebar-background: 0 0% 0%;      /* Sidebar full black */
+    --sidebar-foreground: 0 0% 92%;
+    --sidebar-primary: 0 0% 100%;       /* Branco premium */
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 92%;
+    --sidebar-border: 0 0% 12%;
+    --sidebar-ring: 0 0% 85%;
+  }
+
+  .dark {
+    /* No modo dark, mantemos o mesmo "black premium" */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 92%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 92%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 92%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 92%;
+
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 0% 18%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 0 0% 80%;
+
+    --status-online: 142 65% 60%;
+    --status-offline: 0 0% 40%;
+    --status-armed: 222 85% 70%;
+    --status-disarmed: 42 95% 55%;
+    --zone-normal: 142 20% 20%;
+    --zone-violated: 0 72% 60%;
+    --zone-bypass: 42 90% 45%;
+
+    --shadow-card: 0 0% 0% / 0.45;
+    --shadow-elevated: 0 0% 0% / 0.65;
+
+    --sidebar-background: 0 0% 0%;
+    --sidebar-foreground: 0 0% 92%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 92%;
+    --sidebar-border: 0 0% 12%;
+    --sidebar-ring: 0 0% 85%;
+  }
+
+
+  /* --- BREATHING (respiração) para dispositivos OK --- */
+  @keyframes soft-breath {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+
+  .soft-breath {
+    animation: soft-breath 3s infinite ease-in-out;
+  }
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+

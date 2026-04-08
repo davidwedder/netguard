@@ -1,0 +1,22 @@
+project_id = "rmjbzklbzfqecsnhygtm"
+
+[functions.test-events]
+verify_jwt = false
+
+[functions.esp32-events]
+verify_jwt = false
+
+[functions.esp32-telemetry]
+verify_jwt = false
+
+[functions.esp32-zones]
+verify_jwt = false
+
+[functions.esp32-intercom]
+verify_jwt = false
+
+[functions.telegram-alert]
+verify_jwt = false
+
+[functions.check-thresholds]
+verify_jwt = false
